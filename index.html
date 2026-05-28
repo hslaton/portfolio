@@ -404,18 +404,11 @@
       align-items: start;
     }
     .about-photo {
-      aspect-ratio: 1;
-      background: var(--tag-bg);
-      border: 2px dashed var(--border);
       border-radius: var(--radius);
-      display: flex; align-items: center;
-      justify-content: center;
-      flex-direction: column; gap: 8px;
-      color: var(--text-secondary);
-      font-size: 0.82rem;
-      text-align: center; padding: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
     }
-    .about-photo .ph-icon { font-size: 2.5rem; opacity: 0.3; }
+    .about-photo img { width: 100%; height: auto; display: block; }
     .about-content h3 {
       font-size: 1.4rem; font-weight: 700;
       letter-spacing: -0.02em;
@@ -467,7 +460,7 @@
       .leadership-grid { grid-template-columns: 1fr 1fr; }
       .approach-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
-      .about-photo { aspect-ratio: 2/1; }
+      .about-photo { max-width: 480px; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
     @media (max-width: 480px) {
@@ -972,8 +965,7 @@
 
       <div class="about-grid">
         <div class="about-photo">
-          <div class="ph-icon">🧑</div>
-          <span>Add a photo here</span>
+          <img src="frames/about_photo.jpg" alt="Hunter Slaton with family">
         </div>
         <div class="about-content">
           <h3>Design leader with deep roots in storytelling.</h3>
